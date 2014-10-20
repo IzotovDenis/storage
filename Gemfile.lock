@@ -195,6 +195,7 @@ DEPENDENCIES
   jquery-rails
   less-rails
   pg
+  puma
   rails (= 4.1.5)
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)

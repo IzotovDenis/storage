@@ -31,6 +31,7 @@ gem 'slim'
 gem 'foreman'
 gem "less-rails"
 gem "ancestry"
+gem "puma"
 gem "carrierwave"
 gem "jquery-fileupload-rails"
 
