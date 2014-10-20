@@ -5,7 +5,10 @@
 @ready = ->
 	$('#new_doc').fileupload
 		dataType: "script"
-		url: "http://lvh.me:3000/docs"
+		url: $("#folder-list").data("docPath")
+		formData:{
+		"doc[folder_id]": $("#folder-list").data("folder-id")
+		}
 
 $(document).ready(ready)
 $(document).on('page:load', ready)

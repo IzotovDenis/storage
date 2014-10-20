@@ -3,11 +3,4 @@
 	-@folder.ancestors.each do |folder|
 		= link_to "#{folder.name} >", folder
 	span.lead = " #{@folder.name}"
-#folder-list
-	table.table
-		- @folders.each do |folder|
-			= render "folders/folder", :folder=>folder
-		- @folder.docs.each do |doc|
-			= render "docs/doc", :doc=>doc
-- if @folders.empty? && @folder.docs.empty?
-	p.lead В папке пусто
+= render "folders/folder_list", :folders=>@folders, :docs=>@docs, :folder_id=>@folder.id

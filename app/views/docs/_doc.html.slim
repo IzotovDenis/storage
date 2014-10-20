@@ -4,6 +4,6 @@
 	td
 		= link_to doc.name, doc.file.url
 	td.buttons
-		= link_to "Переместить", "#", :class=>"btn btn-default btn-xs"
-		= link_to "Переименовать", "#", :class=>"btn btn-default btn-xs"
+		/ = link_to "Переместить", "#", :class=>"btn btn-default btn-xs"
+		/ = link_to "Переименовать", "#", :class=>"btn btn-default btn-xs"
 		= link_to "Удалить", doc, method: :delete, :remote=>true, :class=>"btn btn-danger btn-xs"

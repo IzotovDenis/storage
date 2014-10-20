@@ -1,0 +1,8 @@
+= content_tag :div, :id=>"folder-list", :data => {:folder_id => folder_id, :doc_path => docs_path}
+	table.table
+		- folders.each do |folder|
+			= render "folders/folder", :folder=>folder
+		- docs.each do |doc|
+			= render "docs/doc", :doc=>doc
+- if folders.empty? && docs.empty?
+	p.lead В папке пусто

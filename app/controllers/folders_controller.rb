@@ -6,6 +6,7 @@ class FoldersController < ApplicationController
     @folders = Folder.roots
     @docs = Doc.where("folder_id IS NULL")
     @new_doc = Doc.new()
+    @folder_id = ""
   end
 
   def new
@@ -28,6 +29,7 @@ class FoldersController < ApplicationController
 
   def show
     @folders = @folder.children
+    @docs = @folder.docs
     @new_folder = Folder.new(:parent_id=>@folder.id)
     @new_doc = Doc.new(:folder=>@folder)
   end

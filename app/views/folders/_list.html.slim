@@ -1,7 +1,7 @@
 .sidebar
   ul#accordion.nav.folder-list
     - folders_tree.each do |folder|
-      li.panel1
+      li id="menu_folder_#{folder['id']}"
         - unless folder['children'].blank?
           = link_to folder_path(folder['id']) do
           	.glyphicon.glyphicon-folder-open.folder-icon
