@@ -1,0 +1,16 @@
+#accordion_sub
+	ul class="sub-list nav-show collapse #{collapse_in(folder['id'])}" id="folder_#{folder['id']}"
+		.panel-body1
+		  ul.nav.nav-pills.nav-stacked
+		    - folder['children'].each do |children|
+		      li
+		        - unless children['children'].blank?
+							= link_to folder_path(children['id'])
+								.glyphicon.glyphicon-folder-open.folder-icon
+								= children['name']
+							b.arrow.glyphicon.glyphicon-plus data-parent="#accordion_sub" data-toggle="collapse" href="#folder_#{children['id']}"
+							= render "folders/sublist", :folder=>children
+		        -else
+		          = link_to folder_path(children['id']) do
+		          	.glyphicon.glyphicon-folder-open.folder-icon
+		          	= children['name']

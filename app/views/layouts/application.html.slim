@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    title Storage
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  body
+  	.container
+      .row
+        = render "layouts/header"
+        = render "layouts/modals"
+    	.row
+    		.col-xs-3
+    			= render 'folders/list'
+    		.col-xs-9.folder-content
+    			= yield

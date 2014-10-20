@@ -1,0 +1,12 @@
+.h-underline
+	span.lead = "Диск"
+#folder-list
+	table.table
+		- @folders.each do |folder|
+			= render "folders/folder", :folder=>folder
+		- @docs.each do |doc|
+			= render "docs/doc", :doc=>doc
+- if @folders.empty? && @docs.empty?
+	p.lead В папке пусто
+
+= render "docs/upload_tmpl"

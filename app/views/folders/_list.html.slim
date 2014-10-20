@@ -1,0 +1,14 @@
+.sidebar
+  ul#accordion.nav.folder-list
+    - folders_tree.each do |folder|
+      li.panel1
+        - unless folder['children'].blank?
+          = link_to folder_path(folder['id']) do
+          	.glyphicon.glyphicon-folder-open.folder-icon
+          	= folder['name']
+          b.arrow.glyphicon.glyphicon-plus data-parent="#accordion" data-toggle="collapse" href="#folder_#{folder['id']}"
+          = render "folders/sublist", :folder=>folder
+        -else
+          = link_to folder_path(folder['id']) do
+            .glyphicon.glyphicon-folder-open.folder-icon
+            = folder['name']

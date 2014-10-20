@@ -1,0 +1,18 @@
+.navbar.navbar-default
+  .navbar-header
+    button.navbar-toggle data-target=".navbar-responsive-collapse" data-toggle="collapse" type="button" 
+      span.icon-bar
+      span.icon-bar
+      span.icon-bar
+    = link_to "Диск", root_path, :class=>"navbar-brand"
+  .navbar-collapse.collapse.navbar-responsive-collapse
+    ul.nav.navbar-nav
+      li
+        a href="#" data-target="#myModal" data-toggle="modal"
+          i.glyphicon.glyphicon-folder-open
+          | Создать папку
+      li
+        = link_to "#", :class=>"fileinput-button" do
+          i.glyphicon.glyphicon-plus
+          span Загрузить файлы
+          = file_field_tag "new_doc", multiple: true, name: "doc[file]"
