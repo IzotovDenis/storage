@@ -1,18 +1,11 @@
 Rails.application.routes.draw do
 
-  get 'docs/index'
+  devise_for :users
 
-  get 'docs/new'
-
-  get 'docs/show'
-
-  get 'docs/create'
-
-  get 'docs/destroy'
-
-  get 'docs/update'
-
-  root 'folders#index'
+  authenticated :user do
+    root 'folders#index', :as => :authenticated_root
+  end
+  root :to => redirect('/users/sign_in')
 
   resources :folders
   resources :docs

@@ -8,14 +8,4 @@ html
   body
   	.container
       .row
-        = render "layouts/header"
-        = render "layouts/modals"
-    	.row
-    		.col-xs-3
-    			= render 'folders/list'
-    		.col-xs-9.folder-content
-    			= yield
-      .row
-        .ds
-      =render "docs/upload_tmpl"
-
+    		= yield
