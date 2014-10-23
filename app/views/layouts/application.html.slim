@@ -10,12 +10,14 @@ html
       .row
         = render "layouts/header"
         = render "layouts/modals"
-    	.row
+      .row
+        span.status Загрузка
+        .progress style="display: none"
+          .bar.progress-bar style=("width: 0%") 
+      .row
     		.col-xs-3
     			= render 'folders/list'
     		.col-xs-9.folder-content
     			= yield
-      .row
-        .progress
-          .bar.progress-bar style=("width: 0%") 
+
 

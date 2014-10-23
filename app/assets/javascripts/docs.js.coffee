@@ -10,8 +10,11 @@
 		"doc[folder_id]": $("#folder-list").data("folder-id")
 		}
 		progressall: (e, data) ->
+			$('.progress').show()
 			progress = parseInt(data.loaded / data.total *100, 10);
 			$('.bar').css('width', progress + '%')
+		done: (e, data) ->
+			$('.status').text("Загружено")
 
 
 $(document).ready(ready)
