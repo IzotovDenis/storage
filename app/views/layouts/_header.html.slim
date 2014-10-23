@@ -16,3 +16,5 @@
           i.glyphicon.glyphicon-plus
           span Загрузить файлы
           = file_field_tag "new_doc", multiple: true, name: "doc[file]"
+      li
+        = link_to "Выход", destroy_user_session_path, method: :delete
