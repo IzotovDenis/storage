@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
-  root 'folders#index'
   devise_for :users
+  authenticated :user do
+  root :to => 'folders#index', :as => :authenticated_root
+  end
+  root :to => redirect('/users/sign_in')
 
   resources :folders
   resources :docs
