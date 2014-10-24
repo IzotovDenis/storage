@@ -1,11 +1,10 @@
 doctype html
-html.auth
+html.cover
   head
     title Storage
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
-  body
+  body.no_background
   	.container
-      .row
-    		= yield
+    	= yield
