@@ -12,9 +12,10 @@
 		progressall: (e, data) ->
 			$('.progress').show()
 			progress = parseInt(data.loaded / data.total *100, 10);
+			$('.status').text("Загрузка")
 			$('.bar').css('width', progress + '%')
 		done: (e, data) ->
-			$('.status').text("Загружено")
+			$('.status').text("Загрузка выполнена")
 
 
 $(document).ready(ready)

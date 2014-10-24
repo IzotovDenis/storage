@@ -1,5 +1,6 @@
 .sidebar
   ul#accordion.nav.folder-list
+    li = link_to "Диск", root_path
     - folders_tree.each do |folder|
       li id="menu_folder_#{folder['id']}"
         - unless folder['children'].blank?
