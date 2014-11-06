@@ -4,6 +4,5 @@
 	td.name
 		=	link_to folder.name, folder
 	td.buttons
-		/ =	link_to "Переместить", "#", :class=>"btn btn-default btn-xs"
-		/ =	link_to "Переименовать", "#", :class=>"btn btn-default btn-xs"
+		span.btn.btn-success.btn-xs.get-link data-id=folder.id data-object="folder" Получить ссылку
 		= link_to "Удалить", folder, method: :delete, :remote=>true, :class=>"btn btn-danger btn-xs"

@@ -16,6 +16,8 @@
 			$('.bar').css('width', progress + '%')
 		done: (e, data) ->
 			$('.status').text("Загрузка выполнена")
+	$('.get-link').click ->
+		prompt("Ссылка на объект. Необходимо скопировать. ....................................................:", "http://disk.planeta-avtodv.ru/link?obj=" + $(this).data("object") + "&id=" + $(this).data("id"))
 
 
 $(document).ready(ready)

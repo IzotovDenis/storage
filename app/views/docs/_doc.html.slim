@@ -6,4 +6,5 @@
 	td.buttons
 		/ = link_to "Переместить", "#", :class=>"btn btn-default btn-xs"
 		/ = link_to "Переименовать", "#", :class=>"btn btn-default btn-xs"
+		span.btn.btn-success.btn-xs.get-link data-id=doc.id data-object="doc" Получить ссылку
 		= link_to "Удалить", doc, method: :delete, :remote=>true, :class=>"btn btn-danger btn-xs"
