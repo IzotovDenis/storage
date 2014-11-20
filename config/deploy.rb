@@ -6,7 +6,7 @@ set :application, 'storage'
 application = 'storage'
 set :rvm_type, :user
 set :rails_env, 'production'
-set :rvm_ruby_version, '2.1.3'
+set :rvm_ruby_version, '2.1.5'
 set :deploy_to, '/home/deployer/apps/storage'
 set :whenever_identifier, ->{ "#{fetch(:application)}_#{fetch(:stage)}" }
 set :puma_rackup, -> { File.join(current_path, 'config.ru') }
