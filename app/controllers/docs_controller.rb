@@ -1,5 +1,5 @@
 class DocsController < ApplicationController
-  before_action :set_doc, only: [:destroy]
+  before_action :set_doc, only: [:destroy, :show]
   def index
   end
 
