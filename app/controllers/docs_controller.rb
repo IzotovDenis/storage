@@ -9,7 +9,7 @@ class DocsController < ApplicationController
   def show
     path = File.join(Rails.root, "public", "uploads", "doc", "file", "#{@doc.id}")
     file = Dir.entries(path).sort[2]
-    send_file(File.join(path, file)
+    send_file(File.join(path, file))
   end
 
   def create
